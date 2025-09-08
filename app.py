@@ -11,7 +11,7 @@ st.set_page_config(page_title="HR Data Analysis", page_icon=":bar_chart:")
 # Load data with caching
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/content/drive/MyDrive/2025_python/HR_Data.csv')
+    df = pd.read_csv('HR_Data.csv')
     df['퇴직'] = df['퇴직여부'].map({'Yes': 1, 'No': 0}).astype('int8')
     return df
 
